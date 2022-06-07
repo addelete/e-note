@@ -1,0 +1,59 @@
+.EmojiPicker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  &__search {
+    flex-shrink: 0;
+    padding: 8px;
+    background: #fff;
+  }
+  &__panel {
+    flex: 1;
+    overflow-y: auto;
+    &__group {
+      &__title {
+        color: #999;
+        padding: 8px;
+      }
+      &__emojis {
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        &__item {
+          font-size: 26px;
+          line-height: 1;
+          padding: 5px;
+          border-radius: 4px;
+          font-family: Pingfang;
+          &:hover {
+            background: #ddd;
+          }
+        }
+      }
+    }
+  }
+  &__preview {
+    flex-shrink: 0;
+    padding: 8px 4px;
+    background: #fff;
+    display: flex;
+    border-top: 1px solid #efefef;
+    align-items: center;
+    &__emoji {
+      font-size: 60px;
+      line-height: 1em;
+      
+    }
+    &__infos {
+      margin-left: 8px;
+      &__name {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

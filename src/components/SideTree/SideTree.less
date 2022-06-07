@@ -1,0 +1,66 @@
+.SideTree {
+  padding: 8px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    &__title {
+      color: #aaa;
+      font-size: 12px;
+      margin-left: 8px;
+      user-select: none;
+    }
+    &__buttons {
+      display: flex;
+      gap: 4px;
+    }
+  }
+  
+  .ant-tree {
+    background: transparent;
+    &.ant-tree-directory .ant-tree-treenode:hover::before {
+      background: #ffffff;
+      border-radius: 4px;
+    }
+    &.ant-tree-directory .ant-tree-treenode-selected:hover::before, &.ant-tree-directory .ant-tree-treenode-selected::before {
+      background: #ffffff;
+      border-radius: 4px;
+    }
+    &.ant-tree-directory .ant-tree-treenode-selected .ant-tree-switcher {
+      color: initial;
+    }
+    &.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      color: #000;
+      font-weight: bolder;
+    }
+    .ant-tree-switcher {
+      line-height: 36px;
+      margin-left: 4px;
+      color: #aaa;
+      width: 18px;
+    }
+    .ant-tree-node-content-wrapper {
+      min-height: 36px;
+      line-height: 36px;
+      padding: 0;
+      display: flex;
+      .ant-tree-iconEle {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 24px;
+      }
+      .ant-tree-title {
+        flex: 1;
+        width: 100px;
+        padding-right: 12px;
+        // overflow: hidden;
+      }
+    }
+    .ant-tree-indent-unit {
+      width: 8px;
+    }
+    
+  }
+}

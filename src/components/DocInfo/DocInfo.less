@@ -1,0 +1,44 @@
+.DocInfo {
+  &__cover {
+    min-height: 160px;
+  }
+  &__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    &__divider {
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      opacity: 0;
+    }
+    &__picker {
+      width: 100%;
+      max-width: var(--editor-max-width);
+      padding: 0 var(--editor-padding);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:hover &__divider {
+      opacity: 1;
+    }
+  }
+  &__title {
+    width: 100%;
+    max-width: var(--editor-max-width);
+    min-width: var(--editor-min-width);
+    padding: 0 var(--editor-padding);
+    margin: 50px auto 30px;
+    .ant-input {
+      padding: 0;
+      font-size: 36px;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      font-weight: bolder;
+    }
+  }
+}

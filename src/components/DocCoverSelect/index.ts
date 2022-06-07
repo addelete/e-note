@@ -1,0 +1,1 @@
+export { DocCoverSelect } from './DocCoverSelect';

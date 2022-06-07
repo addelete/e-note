@@ -1,0 +1,58 @@
+.DocCoverSelect {
+  &__exist {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    &__adjustingBox {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      cursor: move;
+      
+      .tips {
+        background-color: #000;
+        color: #fff;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 8px;
+        border-radius: 4px;
+        opacity: 0.5;
+      }
+    }
+    &__buttons {
+      width: 100%;
+      max-width: var(--editor-max-width);
+      min-width: var(--editor-min-width);
+      padding: 0 var(--editor-padding);
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: flex-end;
+      z-index: 1;
+      display: none;
+      opacity: 0.8;
+    }
+    &.showButtons &__buttons, .DocInfo:hover &__buttons{
+      display: flex;
+    }
+  }
+  &__empty {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__button {
+      display: none;
+    }
+    &:hover &__button{
+      display: block;
+    }
+  }
+}

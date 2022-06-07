@@ -1,0 +1,22 @@
+{
+  "vite": true,
+  "plugins": [
+    [
+      "build-plugin-antd",
+      {
+        "disableModularImport": true,
+        "themeConfig": {
+          "primary-color": "#0058ff",
+          "border-radius-base": "4px"
+        }
+      }
+    ],
+    [
+      "build-plugin-css-assets-local",
+      {
+        "outputPath": "assets",
+        "relativeCssPath": "../"
+      }
+    ]
+  ]
+}
